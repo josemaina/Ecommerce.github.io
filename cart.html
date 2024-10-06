@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - JOSE FASHIONS</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #cart {
+            width: 80%;
+            margin: 20px auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<section id="header">
+    <a href="#"><img src="img/logo1.png" class="logo" alt=""></a>
+    <p>This is JOSE FASHIONS</p>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+<div id="cart">
+    <h1>Your Shopping Cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+            <!-- Cart items will be populated here via JavaScript -->
+        </tbody>
+    </table>
+    <div class="total" id="subtotal">Subtotal: KSH 0</div>
+    <a href="Checkout.html"><button>Proceed to Checkout</button></a>
+</div>
+
+<script>
+    // Sample cart data
+    let cartItems = [
+        { id: 1, name: "Cartoon Astronaut T-Shirts", price: 1050, quantity: 2 },
+        { id: 2, name: "Flex You Shirts", price: 1200, quantity: 1 },
+        { id: 3, name: "Latest Dior Shirts", price: 1500, quantity: 1 },
+    ];
+
+    function renderCart() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        cartItemsContainer.innerHTML = '';
+
+        let subtotal = 0;
+        
+        cartItems.forEach(item => {
+            const total = item.price * item.quantity;
+            subtotal += total;
+            cartItemsContainer.innerHTML += `
+                <tr>
+                    <td>${item.name}</td>
+                    <td>KSH ${item.price}</td>
+                    <td>
+                        <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)">
+                    </td>
+                    <td>KSH ${total}</td>
+                    <td><button onclick="removeItem(${item.id})">Remove</button></td>
+                </tr>
+            `;
+        });
+
+        document.getElementById('subtotal').innerText = `Subtotal: KSH ${subtotal}`;
+    }
+
+    function updateQuantity(id, quantity) {
+        const item = cartItems.find(item => item.id === id);
+        if (item) {
+            item.quantity = parseInt(quantity);
+            renderCart();
+        }
+    }
+
+    function removeItem(id) {
+        cartItems = cartItems.filter(item => item.id !== id);
+        renderCart();
+    }
+
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+        alert("Proceeding to checkout...");
+        // Implement checkout functionality here
+    });
+
+    renderCart(); // Initial render
+</script>
+
+</body>
+</html>
+

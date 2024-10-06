@@ -1,0 +1,390 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MilliHub</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo1.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header">
+       
+        <h2>#Shop At Your Comfort</h2>
+        
+        <p>Save more with coupons and FlashSales</p>
+        
+    </section>
+
+    <section id="product1" class="section-p1">
+        
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/f1.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Polo Shirt.</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,050</h4>
+                </div>
+                <button onclick="addToCart(1, 'Polo Shirt.', 1050)">Add Polo Shirt. to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/f2.jpg" alt="">
+                <div class="des">
+                    <span>Rugby Shirt.</span>
+                    <h5>Rugby Shirt.</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,200</h4>
+                    </div>
+                    <button onclick="addToCart(2, 'Rugby Shirt.', 1200)">Add Rugby Shirt. to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/f3.jpg" alt="">
+                <div class="des">
+                    <span>Raglan sleeve t-shirts</span>
+                    <h5>Raglan sleeve t-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,500</h4>
+                </div>
+                <button onclick="addToCart(3, 'Raglan sleeve t-shirts', 1500)">Add Raglan sleeve t-shirts to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/f4.jpg" alt="">
+                <div class="des">
+                    <span>Henley Shirt.</span>
+                    <h5>Henley Shirt.</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,350</h4>
+                </div>
+                <button onclick="addToCart(4, 'Henley Shirt.', 1350)">Add Henley Shirt. to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/f5.jpg" alt="">
+                <div class="des">
+                    <span>Men Classsic Style</span>
+                    <h5>Men Classsic Style</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,180</h4>
+                </div>
+                <button onclick="addToCart(5, 'Men Classsic Style', 1180)">Add Men Classsic Style to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/f6.jpg" alt="">
+                <div class="des">
+                    <span>Cuban Collar Shirt.</span>
+                    <h5>Cuban Collar Shirt.</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,050</h4>
+                </div>
+                <button onclick="addToCart(6, 'Cuban Collar Shirt.', 1050)">Add Cuban Collar Shirt. to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/f7.jpg" alt="">
+                <div class="des">
+                    <span>Rugby Shirt.</span>
+                    <h5>Rugby Shirt.</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,250</h4>
+                </div>
+                <button onclick="addToCart(7, 'Rugby Shirt.', 1250)">Add Rugby Shirt. to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/f8.jpg" alt="">
+                <div class="des">
+                    <span>Dress Shirt</span>
+                    <h5>Dress Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,430</h4>
+                </div>
+                <button onclick="addToCart(8, 'Dress Shirt', 1430)">Add Dress Shirt Finest to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n1.jpg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaunt T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,050</h4>
+                </div>
+                <button onclick="addToCart(9, 'Cartoon Astronaunt T-Shirts', 1050)">Add Cartoon Astronaunt T-Shirts to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n2.jpg" alt="">
+                <div class="des">
+                    <span>Dior</span>
+                    <h5>Flex You Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,200</h4>
+                </div>
+                <button onclick="addToCart(10, 'Flex You Shirts', 100)">Add Flex You Shirts to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n3.jpg" alt="">
+                <div class="des">
+                    <span>DIOR Dior</span>
+                    <h5>Latest Dior Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,500</h4>
+                </div>
+                <button onclick="addToCart(11, 'Latest Dior Shirts', 1500)">Add Latest Dior Shirts to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n4.jpg" alt="">
+                <div class="des">
+                    <span>Under Amour</span>
+                    <h5>Under Amour Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,350</h4>
+                </div>
+                <button onclick="addToCart(12, 'Under Amour Shirts', 1350)">Add Under Amour Shirts to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n5.jpg" alt="">
+                <div class="des">
+                    <span>AMIRI</span>
+                    <h5>Men Classsic Style</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,180</h4>
+                </div>
+                <button onclick="addToCart(13, 'Men Classsic Style', 1180)">Add Men Classsic Style to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n6.jpg" alt="">
+                <div class="des">
+                    <span>TrippleS</span>
+                    <h5>Tripple M$S Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,050</h4>
+                </div>
+                <button onclick="addToCart(14, 'Tripple M$S Shirts', 1050)">Add Tripple M$S Shirts to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n7.jpg" alt="">
+                <div class="des">
+                    <span>Trojan</span>
+                    <h5>Trojan Men Style</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,250</h4>
+                </div>
+                <button onclick="addToCart(15, 'Trojan Men Style', 1250)">Add Trojan Men Style to Cart</button>
+            </div>
+            <div class="pro">
+                <img src="img/n8.jpg" alt="">
+                <div class="des">
+                    <span>Dasoom</span>
+                    <h5>Dasoom Finest</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KSH 1,430</h4>
+                </div>
+                <button onclick="addToCart(16, 'Dasoom Finest', 1430)">Add Dasoom Finest to Cart</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        function addToCart(productId, productName, productPrice) {
+            const item = {
+                id: productId,
+                name: productName,
+                price: productPrice,
+                quantity: 1,
+            };
+    
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            const existingItemIndex = cart.findIndex(cartItem => cartItem.id === productId);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity += 1;
+            } else {
+                cart.push(item);
+            }
+    
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Item added to cart!');
+        }
+        </script>
+
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="news">
+            <h4>Sign Up For Newsletters </h4>
+            <p>Get personalised emails about our latest shop and <span>Special Offers</span>.</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Enter Your Email">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/logo1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> P.O.BOX 6-60100 Embu-Kenya</p>
+            <p><strong>Phone: </strong> +254 727933950, +254 788199505</p>
+            <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Fri</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Conditions</a>
+            <a href="contact.html">Contact Us</a>
+         </div>
+         <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+         </div>
+         <div class="col install ">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+         </div>
+         
+    </footer>
+
+    
+    <script src="script.js"></script> 
+</body>
+</html>
+

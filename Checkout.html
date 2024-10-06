@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - JOSE FASHIONS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .payment-option {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+        }
+        .payment-option img {
+            max-width: 100%;
+            height: auto;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Checkout</h1>
+
+    <div class="payment-methods">
+        <div class="payment-option" id="mpesa">
+            <h2>M-Pesa</h2>
+            <img src="img/images.png" alt="M-Pesa Logo">
+            <input type="text" placeholder="Phone Number" id="mpesa-phone" />
+            <input type="number" placeholder="Amount" id="mpesa-amount" />
+        </div>
+
+        <div class="payment-option" id="western-union">
+            <h2>Western Union</h2>
+            <img src="img/217427.png" alt="Western Union Logo">
+            <input type="text" placeholder="Phone Number" id="wu-phone" />
+            <input type="number" placeholder="Amount" id="wu-amount" />
+        </div>
+
+        <div class="payment-option" id="paypal">
+            <h2>PayPal</h2>
+            <img src="img/Paypal_2014_logo.png" alt="PayPal Logo">
+            <input type="email" placeholder="Email" id="paypal-email" />
+            <input type="number" placeholder="Amount" id="paypal-amount" />
+        </div>
+    </div>
+
+    <button class="submit-btn" onclick="processPayment()">Proceed to Checkout</button>
+</div>
+
+<script>
+    function processPayment() {
+        let mpesaPhone = document.getElementById('mpesa-phone').value;
+        let mpesaAmount = document.getElementById('mpesa-amount').value;
+
+        let wuPhone = document.getElementById('wu-phone').value;
+        let wuAmount = document.getElementById('wu-amount').value;
+
+        let paypalEmail = document.getElementById('paypal-email').value;
+        let paypalAmount = document.getElementById('paypal-amount').value;
+
+        let totalAmount = 0;
+        let paymentMethod = '';
+
+        // Check M-Pesa payment
+        if (mpesaPhone && mpesaAmount) {
+            totalAmount += parseFloat(mpesaAmount);
+            paymentMethod = 'M-Pesa';
+        }
+
+        // Check Western Union payment
+        if (wuPhone && wuAmount) {
+            totalAmount += parseFloat(wuAmount);
+            paymentMethod = 'Western Union';
+        }
+
+        // Check PayPal payment
+        if (paypalEmail && paypalAmount) {
+            totalAmount += parseFloat(paypalAmount);
+            paymentMethod = 'PayPal';
+        }
+
+        if (totalAmount > 0) {
+            alert(`Payment Successful!\nPayment Method: ${paymentMethod}\nTotal Amount: KSH ${totalAmount}`);
+            // Here you can implement your logic to deduct the amount from the user's credit
+            // For now, it's just an alert
+        } else {
+            alert('Please fill in at least one payment method.');
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
